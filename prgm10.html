@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Getter and Setter Example</h2>
+
+<p id="output"></p>
+
+<script>
+function GetterSetter00PJS() {
+
+    class Dog {
+        constructor(name) {
+            this.name = name;
+        }
+
+        // Getter
+        get dogName() {
+            return this.name;
+        }
+
+        // Setter
+        set dogName(newName) {
+            this.name = newName;
+        }
+
+        // Method
+        bark() {
+            return this.name + " says woof!";
+        }
+    }
+
+    // Create object
+    let myDog = new Dog('Rayne');
+
+    let result = "";
+    result += "Original Name: " + myDog.dogName + "<br>";
+
+    // Change name using setter
+    myDog.dogName = 'Buddy';
+    result += "New Name: " + myDog.dogName + "<br>";
+
+    // Bark
+    result += myDog.bark();
+
+    document.getElementById("output").innerHTML = result;
+}
+
+// Call function
+GetterSetter00PJS();
+</script>
+
+</body>
+</html>

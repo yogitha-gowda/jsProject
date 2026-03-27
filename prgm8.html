@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <P>Call a function which performs a calculation</P>
+    <button type="button" onclick="CheckError()">Result</button>
+    <p id="demo"></p>
+    <script>
+        function CheckError(){
+            try{
+                var result =Sum(10,30);
+            }
+            catch(ex){
+                document.getElementById("errorMessage").innerHTML=ex;
+                console.log("Sum is not defined");
+            }
+            finally{
+                document.getElementById("message ").innerHTML="finally block execution";
+            }
+        }
+function throwError(){
+try{
+throw "error occured"
+}
+catch(ex)
+{
+alert(ex);
+}
+}
+    </script>
+    </body>
+</html>
